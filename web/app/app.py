@@ -7,6 +7,7 @@ from flask_migrate import Migrate
 
 app = Flask(__name__)
 application = app
+client = app.test_client()
 app.config.from_pyfile('config.py')
 convention = {
     "ix": 'ix_%(column_0_label)s',
